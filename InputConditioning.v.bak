@@ -1,0 +1,42 @@
+module InputConditioning(
+  input wire KEY0,       // Input A (pushbutton)
+  input wire KEY1,       // Clock input (pushbutton)
+  output wire LEDR9     // Output A pulse (red LED)
+);
+
+// State definition
+reg [1:0] state;
+parameter IDLE = 2'b00;
+parameter PULSE = 2'b01;
+
+// Registers
+reg [1:0] current_state, next_state;
+
+// Outputs
+reg LEDR9_output;
+
+always @(posedge KEY1) begin
+  current_state <= next_state;
+end
+
+always @(posedge KEY1) begin
+  case(current_state)
+    IDLE: begin
+      if (KEY0) begin
+        next_state <= PULSE;
+        LEDR9_output <= 1'b1;
+      end else begin
+        next_state <= IDLE;
+        LEDR9_output <= 1'b0;
+      end
+    end
+    PULSE: begin
+      next_state <= IDLE;
+      LEDR9_output <= 1'b0;
+    end
+  endcase
+end
+
+assign LEDR9 = LEDR9_output;
+
+endmodule
