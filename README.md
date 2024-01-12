@@ -106,7 +106,7 @@ Combination locks remain important today as they provide a reliable and keyless 
 
 ## Moore FSM State Design
 * Analyzes machine behaviour and simplifies required states
-* See state diagram & block diagram [here]()
+* See state diagram & block diagram [here](https://github.com/v5run/DE1-SoC-ComboLock/blob/main/State_Diagrams%20%2B%20Block_Diagram%20-%20ComboLockFSM.pdf)
 
 
 <!-- CONTACT -->
