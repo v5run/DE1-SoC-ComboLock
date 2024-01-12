@@ -40,18 +40,16 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#functionality">Functionality</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#opening-the-door">Opening the Door</a></li>
+        <li><a href="#alarm-system">Alarm System</a></li>
+        <li><a href="#changing-the-combination">Changing the Combination</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#seven-segment-display">Seven-Segment-Display</a></li>
+    <li><a href="#moore-fsm-state-design">Moore FSM State Design</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -96,7 +94,7 @@ Combination locks remain important today as they provide a reliable and keyless 
   * If done correctly, output will signal the user to enter a new combination (n on 7 seg. disp.).
   * Set the 4 input bits to the new combination and "press" Change to store the new value.
 
-## Seven-Segment-Display Output(s)
+## Seven-Segment-Display
 
 * Utilize seven-segment display HEX5 to provide output for the circuit.
 * Display '-' if all outputs are neutral.
